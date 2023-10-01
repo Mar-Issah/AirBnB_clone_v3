@@ -22,9 +22,9 @@ def get_status():
 @app_views.route('/stats', strict_slashes=False)
 def get_stats():
     """ retrieves the number of each objects by type"""
-    todos = {'states': State, 'users': User,
-            'amenities': Amenity, 'cities': City,
-            'places': Place, 'reviews': Review}
+    todos = {
+        'states': State, 'users': User, 'amenities':
+            Amenity, 'cities': City, 'places': Place, 'reviews': Review}
     for key in todos:
         todos[key] = storage.count(todos[key])
     return jsonify(todos)
