@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""Cities view"""
+"""Amenities view"""
 
 
 from flask import abort, jsonify, request
 from api.v1.views import app_views
-from models.city import City
-from models.state import State
 from models.amenity import Amenity
 from models import storage
 
