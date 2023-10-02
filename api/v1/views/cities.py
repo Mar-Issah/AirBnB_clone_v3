@@ -4,7 +4,6 @@
 
 from flask import abort, jsonify, request
 from api.v1.views import app_views
-from os import name
 from models.city import City
 from models.state import State
 from models import storage
