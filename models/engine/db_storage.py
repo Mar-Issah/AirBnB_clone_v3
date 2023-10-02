@@ -77,8 +77,9 @@ class DBStorage:
 
     def get(self, cls, id):
         """A method to retrieve one object"""
+        print('id in dbstorage: ' + id)
         if cls and id:
-            name = cls, __name__ + "." + id
+            name = cls.__name__ + "." + id
             count = self.all(cls)
             for key in count:
                 if key == name:
